@@ -1,0 +1,100 @@
+.user,
+.one {
+    float: left;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.user {
+    width: 50px;
+    background-color: #ddd;
+    height: 55.5px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.one {
+    width: 600px;
+    background-color: #ddd;
+}
+
+.parent {
+    margin-bottom: 10px;
+    counter-increment: i;
+}
+
+.c {
+    clear: both;
+}
+
+.one {
+    position: relative;
+}
+
+.one::after {
+    content: counter(i);
+    position: absolute;
+    background-color: green;
+    width: 10px;
+    /* height: 16px; */
+    padding: 2px;
+    color: wheat;
+    right: -5px;
+    /* top: calc(46%); */
+    top: 50%;
+    margin-top: -10px;
+}
+
+.one::before {
+    content: "";
+    position: absolute;
+    /* background-color: green; */
+    width: 0;
+    height: 0;
+    top: 40%;
+    left: -3%;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid blue;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* style for before/after */
+
+
+/* ul {
+    list-style: none;
+    position: relative;
+}
+
+ul li {
+    position: relative;
+    margin: 10px;
+}
+
+ul li::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #009688 transparent transparent;
+} */
